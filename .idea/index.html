@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Bestilling av kinobilleter</title>
-
 </head>
 <body>
+<table>
+    <h1>Bestilling av kinobilliter</h1>
+<tr><td>Velg Film:</td>
+<td><select id="film">
+    <option>velg film her</option>
+    <option>Replay 1988</option>
+    <option>My life</option>
+    <option>Welcome home</option>
+    <option>Sweet home</option>
+    <option>Taitanic</option>
+    <option>Moon lovers</option>
+    <option>Doctors</option>
+    <option>Goblin</option>
+</select>
+</td></tr>
+</table>
+<br><br>
+<div>
+<label for="Antall">Antall:</label>
+<input type="text" id="Antall" name="Antall"
+pattern="[0-9]" title="Antall">
+</div>
+<br><br>
+<div>
+    <table>
+        <tr> <td>Fornavn</td>
+            <td> <input type="text" id="name"></td></tr>
+        <tr> <td>Etternavn</td>
+            <td> <input type="text" id="etternavn"></td></tr>
+        <tr> <td>Telefonnr</td>
+            <td> <input type="text" id="telefonnr"></td></tr>
+        <tr> <td>Epost</td>
+            <td> <input type="text" id="epost"></td></tr>
+    </table>
+</div>
+
 
 </body>
 </html>
