@@ -7,43 +7,43 @@
 <body>
 <script src="kinobilliter%20data1700.js"></script>
 <form>
-<table>
-    <tr><td>Velg Film:</td>
-        <td><select id="film">
-            <option>velg film her</option>
-            <option>Replay 1988</option>
-            <option>My life</option>
-            <option>Welcome home</option>
-            <option>Sweet home</option>
-            <option>Taitanic</option>
-            <option>Moon lovers</option>
-            <option>Doctors</option>
-            <option>Goblin</option>
-            <option>Doctor slump</option>
-            <option>Deadpool</option>
-        </select>
-        </td></tr>
-</table>
-<br><br>
-<div>
-    <label for="Antall">Antall:</label>
-    <input type="text" id="Antall" name="Antall"
-           pattern="[0-9]" title="Antall">
-</div>
-<br><br>
-<div>
     <table>
-        <tr> <td>Fornavn</td>
-            <td> <input type="text" id="fornavn"></td></tr>
-        <tr> <td>Etternavn</td>
-            <td> <input type="text" id="etternavn"></td></tr>
-        <tr> <td>Telefonnr</td>
-            <td> <input type="text" id="telefonnr" pattern="[0-9]" maxlength="8"></td></tr>
-        <tr> <td>Epost</td>
-            <td> <input type="text" id="epost"></td></tr>
+        <tr><td>Velg Film:</td>
+            <td><select id="film">
+                <option>velg film her</option>
+                <option>Replay 1988</option>
+                <option>My life</option>
+                <option>Welcome home</option>
+                <option>Sweet home</option>
+                <option>Taitanic</option>
+                <option>Moon lovers</option>
+                <option>Doctors</option>
+                <option>Goblin</option>
+                <option>Doctor slump</option>
+                <option>Deadpool</option>
+            </select>
+            </td></tr>
     </table>
-</div>
-<button type="submit" onclick="addToArray()">kjøp billett</button>
+    <br><br>
+    <div>
+        <label for="Antall">Antall:</label>
+        <input type="text" id="Antall" name="Antall"
+               title="Antall">
+    </div>
+    <br><br>
+    <div>
+        <table>
+            <tr> <td>Fornavn</td>
+                <td> <input type="text" id="fornavn"></td></tr>
+            <tr> <td>Etternavn</td>
+                <td> <input type="text" id="etternavn"></td></tr>
+            <tr> <td>Telefonnr</td>
+                <td> <input type="text" id="telefonnr" maxlength="8"></td></tr>
+            <tr> <td>Epost</td>
+                <td> <input type="text" id="epost"></td></tr>
+        </table>
+    </div>
+    <button type="submit" onclick="addToArray()">kjøp billett</button>
 </form>
 <h2>Alle Billetter</h2>
 
