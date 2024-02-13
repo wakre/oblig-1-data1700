@@ -5,8 +5,8 @@
     <title>Bestilling av kinobilleter</title>
 </head>
 <body>
+<script src="kinobilliter%20data1700.js"></script>
 <table>
-    <h1>Bestilling av kinobilliter</h1>
     <tr><td>Velg Film:</td>
         <td><select id="film">
             <option>velg film her</option>
@@ -18,6 +18,8 @@
             <option>Moon lovers</option>
             <option>Doctors</option>
             <option>Goblin</option>
+            <option>Doctor slump</option>
+            <option>Deadpool</option>
         </select>
         </td></tr>
 </table>
@@ -31,7 +33,7 @@
 <div>
     <table>
         <tr> <td>Fornavn</td>
-            <td> <input type="text" id="name"></td></tr>
+            <td> <input type="text" id="fornavn"></td></tr>
         <tr> <td>Etternavn</td>
             <td> <input type="text" id="etternavn"></td></tr>
         <tr> <td>Telefonnr</td>
@@ -40,7 +42,14 @@
             <td> <input type="text" id="epost"></td></tr>
     </table>
 </div>
+<button type="button" onclick="addToArray()">kjøp billett</button>
+
+<h2>Alle Billetter</h2>
 
 
+<h2>Film Antall Fornavn Etternavn Epost </h2>
+<p id="kjøpte billetter"></p>
+
+<button type="button" onclick="tomArray()"> Slett alle billetene</button>
 </body>
 </html>

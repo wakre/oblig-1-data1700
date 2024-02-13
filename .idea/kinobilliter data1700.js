@@ -1,49 +1,30 @@
-function billett() {
-    const forNavn = document.getElementById("Fornavn").value;
-    const etterNavn = document.getElementById("Etternavn").value;
-    const telefonNr = document.getElementById("Telefonnr").value;
-    const epost = document.getElementById("Epost").value;
-    var billetter = []; // Array for å lagre billetter
+let filmArray = []; // Array for å lagre billetter
+function addToArray() {
+    console.log("arrayet startet");
+    const film = document.getElementById("film").value;
+    const Antall = document.getElementById("Antall").value;
+    const fornavn= document.getElementById("fornavn").value;
+    const etternavn = document.getElementById("etternavn").value;
+    const telefonnr = document.getElementById("telefonnr").value;
+    const epost = document.getElementById("epost").value;
+    filmArray.push({filmKey :film, AntallKey : Antall, fornavnKey :fornavn, etternavnKey : etternavn, telefonnrKey : telefonnr, epostKey : epost});
+    console.log (filmArray);
+    populateHTML(filmArray);
 
-    function addToArray() {
-        var film = document.getElementById('film').value;
-        var antall = document.getElementById('antall').value;
-        var fornavn = document.getElementById('fornavn').value;
-        var etternavn = document.getElementById('etternavn').value;
-        var telefonnr = document.getElementById('telefonnr').value;
-        var epost = document.getElementById('epost').value;
-
-        // Opprett et billettobjekt og legg til i arrayet
-        var billett = {
-            film: film,
-            antall: antall,
-            fornavn: fronavn,
-            etternavn: etternavn,
-            telefonnr: telefonnr,
-            epost: epost
-        };
-        billetter.push(billett);
-
-        // Tøm input-feltene
-        document.getElementById('film').selectedIndex = 0;
-        document.getElementById('antall').value = '';
-        document.getElementById('fronavn').value = '';
-        document.getElementById('etternavn').value = '';
-        document.getElementById('telefonnr').value = '';
-        document.getElementById('epost').value = '';
-
-        // Vis billettene
-        showTickets();
+}
+function populateHTML(objArr){
+    console.log("film")
+    let html = "<ol>";
+    console.log(objArr)
+    for (let i in objArr){
+        console.log(objArr[i].fornavnKey)
+        html += "<li>" +"Filmen er "+ objArr[i].filmKey  + ": Antall Billetter er" + objArr[i].AntallKey +", Navnet er "+ objArr[i].fornavnKey + " " + objArr[i].etternavnKey + ", Telefonnr er"+ objArr[i].telefonnrKey + " og eposten er " + objArr[i].epostKey  + "</li>";
     }
-
-    function showTickets() {
-        var ticketList = document.getElementById('ticketList');
-        ticketList.innerHTML = ''; // Tøm listen før vi legger til billetter på nytt
-
-        billetter.forEach(function(ticket) {
-            var listItem = document.createElement('li');
-            listItem.textContent = 'film: ' + ticket.film + ', antall: ' + ticket.antall + ', fornavn: ' + ticket.fornavn + ', etternavn' + ticket.etternavn + ', telefonnr: ' + ticket.telefonnr + ', epost: ' + ticket.epost;
-            ticketList.appendChild(listItem);
-        });
-    }
+    html += "</ol>"
+    document.getElementById("kjøpte billetter").innerHTML = html;
+    console.log(html)
+}
+function tomArray(){
+    filmArray=[];
+    populateHTML(filmArray);
 }
