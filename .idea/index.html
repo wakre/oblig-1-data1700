@@ -6,6 +6,7 @@
 </head>
 <body>
 <script src="kinobilliter%20data1700.js"></script>
+<form>
 <table>
     <tr><td>Velg Film:</td>
         <td><select id="film">
@@ -37,13 +38,13 @@
         <tr> <td>Etternavn</td>
             <td> <input type="text" id="etternavn"></td></tr>
         <tr> <td>Telefonnr</td>
-            <td> <input type="text" id="telefonnr"></td></tr>
+            <td> <input type="text" id="telefonnr" pattern="[0-9]" maxlength="8"></td></tr>
         <tr> <td>Epost</td>
             <td> <input type="text" id="epost"></td></tr>
     </table>
 </div>
-<button type="button" onclick="addToArray()">kjøp billett</button>
-
+<button type="submit" onclick="addToArray()">kjøp billett</button>
+</form>
 <h2>Alle Billetter</h2>
 
 
